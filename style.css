@@ -1,0 +1,416 @@
+/* Palet warna romantis */
+:root {
+    --pink-light: #FFD1DC;
+    --lavender: #E6E6FA;
+    --blue-light: #ADD8E6;
+    --soft-purple: #D8BFD8;
+    --peach: #FFDAB9;
+    --cream: #FFF8DC;
+    --text-dark: #333;
+    --text-light: #555;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, var(--lavender) 0%, var(--pink-light) 50%, var(--blue-light) 100%);
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Efek bintang berkedip */
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 3s infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+/* Efek bunga mekar */
+.flower {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, var(--pink-light) 30%, transparent 30%),
+                radial-gradient(circle, var(--lavender) 30%, transparent 30%);
+    background-size: 15px 15px;
+    background-position: 0 0, 8px 8px;
+    opacity: 0.1;
+    animation: bloom 10s infinite alternate;
+    z-index: 0;
+}
+
+@keyframes bloom {
+    0% { transform: scale(0.8) rotate(0deg); }
+    100% { transform: scale(1.2) rotate(360deg); }
+}
+
+/* Kontainer utama */
+.container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+h1 {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 3.5rem;
+    color: var(--text-dark);
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--pink-light), transparent);
+}
+
+/* Section utama */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+/* Kartu input */
+.input-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    animation: slideInLeft 1s ease-out;
+}
+
+.input-card h2 {
+    font-family: 'Georgia', serif;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.input-card p {
+    color: var(--text-light);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Form styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--lavender);
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--pink-light);
+    box-shadow: 0 0 10px rgba(255, 209, 220, 0.5);
+}
+
+.error-message {
+    color: #ff6b6b;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    display: none;
+}
+
+/* Tombol */
+.btn {
+    background: linear-gradient(135deg, var(--pink-light), var(--lavender));
+    color: var(--text-dark);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    display: inline-block;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* Kartu countdown */
+.countdown-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    animation: slideInRight 1s ease-out;
+    text-align: center;
+}
+
+.countdown-display {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--text-dark);
+    margin: 20px 0;
+}
+
+.countdown-message {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: 20px;
+    min-height: 30px;
+}
+
+.theme-selector {
+    margin-top: 20px;
+}
+
+.theme-selector label {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.theme-options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.theme-option {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border: 3px solid transparent;
+}
+
+.theme-option:hover {
+    transform: scale(1.1);
+}
+
+.theme-option.selected {
+    border-color: var(--text-dark);
+}
+
+/* Surat cinta */
+.love-letter-card {
+    grid-column: 1 / -1;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    animation: fadeInUp 1.5s ease-out;
+    display: none;
+}
+
+.love-letter-content {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23FFF8DC"/><path d="M0,0 L100,100 M100,0 L0,100" stroke="%23D2B48C" stroke-width="0.5" opacity="0.3"/></svg>');
+    padding: 40px;
+    border-radius: 10px;
+    position: relative;
+    min-height: 300px;
+    text-align: center;
+}
+
+.love-letter-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 248, 220, 0.3);
+    border-radius: 10px;
+}
+
+.love-letter-text {
+    position: relative;
+    z-index: 1;
+    font-family: 'Georgia', serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+.wax-seal {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, #ff6b6b, #ff4757);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.letter-options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.letter-option {
+    padding: 8px 20px;
+    background: rgba(230, 230, 250, 0.5);
+    border: 2px solid transparent;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.letter-option:hover,
+.letter-option.selected {
+    background: var(--lavender);
+    border-color: var(--pink-light);
+}
+
+/* Animasi */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.heart-icon {
+    display: inline-block;
+    color: #ff6b6b;
+    animation: heartbeat 1.5s infinite;
+    margin: 0 5px;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .countdown-display {
+        font-size: 2rem;
+    }
+}
+
+/* Tema latar */
+.theme-night-sky {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
+
+.theme-sunset {
+    background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 50%, #ff9a56 100%);
+}
+
+.theme-flowers {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 50%, #ffeaa7 100%);
+}
+
+/* Pesan animasi */
+.message-animation {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
