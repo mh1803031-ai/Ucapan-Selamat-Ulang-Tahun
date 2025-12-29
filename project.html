@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project - Kubio Portfolio</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icon-kubio2.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle" title="Toggle dark/light theme">
+        <i class="fas fa-moon" id="themeIcon"></i>
+    </button>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="Home.html" class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    Kubio
+                </a>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="Home.html" class="nav-link">Beranda</a></li>
+                    <li><a href="project.html" class="nav-link active">Project</a></li>
+                    <li><a href="riwayat.html" class="nav-link">Perjalanan</a></li>
+                    <li><a href="error-page.html" class="nav-link">Prestasi</a></li>
+                    <li><a href="Home.html#contact" class="nav-link">Kontak</a></li>
+                </ul>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" title="Toggle navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+ <!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <h1>Karya Terbaru</h1>
+        <p>Dari konsep hingga kode yang berjalan. Lihat sendiri proyek-proyek yang telah saya wujudkan selama studi Rekayasa Perangkat Lunak dan Pemikiran abstrak saya.</p>
+    </div>
+</section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects fade-in">
+    <div class="container">
+        <h2 class="section-title">Proyek Saya</h2>
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">Semua</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="design">Design</button>
+            <button class="filter-btn" data-filter="learning">Learning</button>
+        </div>
+        <div class="projects-grid">
+            <!-- Project 1: UI/UX Design -->
+            <div class="project-card" data-category="design">
+                <div class="project-image">
+                    <img src="https://picsum.photos/seed/figma-design/400/220.jpg" alt="UI/UX Design Using Figma">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" class="project-link" data-project="figma-design">
+                                <i class="fas fa-external-link-alt"></i> Lihat Detail
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Basic UI/UX Design Using Figma</h3>
+                    <p class="project-description">Saya membuat mockup UI/UX dasar di Figma, terinspirasi dari website wedding organizer.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Figma</span>
+                        <span class="tech-tag">UI Design</span>
+                        <span class="tech-tag">UX Design</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Basic Website -->
+            <div class="project-card" data-category="web">
+                <div class="project-image">
+                    <img src="images/kubio-screenshot.png" alt="Kubio website">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="https://kubio.netlify.app" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/mh1803031-ai/Kubio" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Basic Website Using HTML & CSS</h3>
+                    <p class="project-description">Website ini dibuat dengan tangan menggunakan HTML dan CSS murni tanpa framework atau library. Ini mencerminkan pemahaman saya tentang struktur, styling, dan dasar desain responsif.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">Responsive Design</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: Birthday Greeting -->
+            <div class="project-card" data-category="web">
+                <div class="project-image">
+                    <img src="images/kookloo-screenshot.png" alt="Birthday Greeting Website">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="https://kookloo.netlify.app" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/mh1803031-ai/Kookloo" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">First Birthday Greeting Website</h3>
+                    <p class="project-description">Proyek ini menggabungkan dasar front-end dengan desain emosional: animasi kustom, tipografi responsif, dan pengungkapan terjadwal dalam JavaScript murni tanpa framework.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Animation</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4: Customizable Birthday Greeting -->
+            <div class="project-card" data-category="web">
+                <div class="project-image">
+                    <img src="images/ucapa-screenshot.png" alt="Customizable Birthday Greeting">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="https://ucapa.netlify.app" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/mh1803031-ai/Ucapan-Selamat-Ulang-Tahun" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Customizable Birthday Greeting Website</h3>
+                    <p class="project-description">Situs ucapan ulang tahun yang dapat digunakan kembali untuk orang terkasih, dibangun dengan HTML, CSS, dan JavaScript.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5: Fictional School Website -->
+            <div class="project-card" data-category="learning">
+                <div class="project-image">
+                    <img src="images/fictional-school-website-screenshot.png" alt="Fictional School Website">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="https://sites.google.com/smklabor.sch.id/smk-merah-putih" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i> Kunjungi Situs
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Fictional School Website</h3>
+                    <p class="project-description">Dibuat menggunakan Google Sites sebagai platform sekolah tiruan. Proyek ini adalah bagian dari pembelajaran saya dalam menggunakan website builder.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Google Sites</span>
+                        <span class="tech-tag">Website Builder</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6: Simple Portfolio Website -->
+            <div class="project-card" data-category="learning">
+                <div class="project-image">
+                    <img src="images/simple-portofolio-website-screenshot.png" alt="Simple Portfolio Website">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="https://sites.google.com/smklabor.sch.id/kubio" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i> Kunjungi Situs
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Simple Portfolio Website</h3>
+                    <p class="project-description">Portfolio minimalis yang dibangun di Google Sites. Ini adalah eksperimen saya dalam membuat portfolio dengan cepat menggunakan platform yang tersedia.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Google Sites</span>
+                        <span class="tech-tag">Website Builder</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Call-to-Action Section (BARU!) -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Memiliki Proyek di Pikiran?</h2>
+                <p>Saya selalu terbuka untuk diskusi tentang proyek baru, ide kreatif, atau peluang untuk menjadi bagian dari visi Anda. Mari kita bangun sesuatu yang hebat bersama!</p>
+                <a href="Home.html#contact" class="btn cta-btn">Hubungi Saya</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details Modal -->
+    <div id="projectModal" class="project-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+<footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Tentang Saya</h3>
+                    <p>Siswa yang passionate tentang web development dan networking. Selalu ingin belajar hal baru dan berbagi pengetahuan dengan teman-teman.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/mh1803031-ai" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/muhammad-habiburrahman-0a04b937a/" class="social-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://discordapp.com/users/1117029333177999381" class="social-link" title="Discord"><i class="fab fa-discord"></i></a>
+                        <a href="https://www.instagram.com/m_hbib03/" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Link Cepat</h3>
+                    <ul class="footer-links">
+                        <li><a href="Home.html"><i class="fas fa-chevron-right"></i> Beranda</a></li>
+                        <li><a href="project.html"><i class="fas fa-chevron-right"></i> Project</a></li>
+                        <li><a href="riwayat.html"><i class="fas fa-chevron-right"></i> Perjalanan</a></li>
+                        <li><a href="Prestasi.html"><i class="fas fa-chevron-right"></i> Prestasi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Sedang Dipelajari</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> React.js</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Network Security</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Cloud Computing</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Python Programming</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Kontak</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> mh1803035@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Pekanbaru,Riau.Indonesia</li>
+                        <li><i class="fas fa-graduation-cap"></i> Student</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Kubio. Learning Portfolio. Made with <i class="fas fa-heart heart-icon"></i> for Learning</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
